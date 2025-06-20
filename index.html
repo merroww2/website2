@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>index :: hankei85cm</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #ccc;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-menu {
+      background-color: #1c1c1c;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .site-title {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      padding: 14px 20px;
+      color: #ccc;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .top-menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 0 0 140px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #1c1c1c;
+    }
+
+    .top-menu ul li {
+      position: relative;
+    }
+
+    .top-menu ul li a {
+      display: block;
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    .top-menu ul li:hover > a {
+      background-color: #333;
+    }
+
+    .top-menu .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1c1c1c;
+      min-width: 160px;
+      z-index: 1000;
+    }
+
+    .top-menu .dropdown li a {
+      padding: 10px 15px;
+    }
+
+    .top-menu ul li:hover .dropdown {
+      display: block;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 100px 40px 40px;
+      min-height: calc(100vh - 50px);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .poster-box {
+      position: sticky;
+      top: 100px;
+      align-self: flex-start;
+      width: 280px;
+      height: auto;
+      background-color: #1a1a1a;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .poster-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .content-box {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      max-width: 800px;
+      box-sizing: border-box;
+    }
+
+
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 20px 20px;
+      }
+
+      .content-box,
+      .sidebar,
+      .poster-box {
+        width: 100%;
+        max-width: 100%;
+        position: static;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="top-menu">
+    <div class="site-title">hankei85cm</div>
+    <ul>
+      <li><a href="#">Index</a></li>
+      <li><a href="#">XXXX</a></li>
+      <li><a href="#">Journal</a></li>
+      <li>
+        <a href="#">Language</a>
+        <ul class="dropdown">
+          <li><a href="#">Subforum 1</a></li>
+          <li><a href="#">Subforum 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Economics</a></li>
+      <li><a href="#">Politics</a></li>
+      <li><a href="#">Reading</a></li>
+      <li><a href="#">Music</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">About Me</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="poster-box">
+      <img src="https://files.catbox.moe/a5xqxr.jpg" alt="Filmposter von The Station Agent" />
+    </div>
+    <div class="content-box">
+      <h1 id="intro">The Station Agent (2002)</h1>
+      <a href="https://www.imdb.com/title/tt0340377/">IMDB </a>,
+      <a href="https://letterboxd.com/film/the-station-agent/">Letterboxd </a>
+      <p>Dies ist ein zentrierter Inhaltsbereich im Stil des Beispielscreenshots.</p>
+      <h2 id="section1">Abschnitt 1</h2>
+      <p>Inhalt von Abschnitt 1</p>
+      <h2 id="section2">Abschnitt 2</h2>
+      <p>Inhalt von Abschnitt 2</p>
+    </div>
+
+  </main>
+</body>
+</html>
